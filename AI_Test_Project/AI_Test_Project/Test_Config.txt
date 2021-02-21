@@ -1,0 +1,30 @@
+Filenames:
+{
+Input_file: Test.ppm
+Output_file: some_image.jpg
+}
+
+Mesh_parameters:
+{
+x_size = 9;                     //reference frame dimensions (try to make it an odd number)
+y_size = 9;
+roughness = 20;                  //meters per node
+}
+
+Boeing_747:
+{
+Avg_Thrust = 252000;            //DEFINITELY a placeholder. avg thrust for a 747 Boeing (newtons)
+Minimum_Velocity = 294.98;      //minimum velocity in m/s
+Wind_Unit = 1;              //m/s per 1 unit of wind vector ((37/127) * (1000/60))
+Wing_Area = 541.2;              //meters^2 for Boeing 747
+Pressure_Const = .613;          //P = .613V^2 where V is wind velocity -> N/m^2
+Drag_Coefficient = .031;         //no unit, C_o in equations of Boeing 747
+Max_Turn_Rate = .07;             //radians
+Plane_mass = 333740;            //mass of plane in kg's
+}
+
+Generation_settings (important!):
+{
+generation_size = 48;
+generation_end_count = 25;
+}
